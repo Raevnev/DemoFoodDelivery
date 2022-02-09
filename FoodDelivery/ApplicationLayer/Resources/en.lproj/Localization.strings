@@ -1,0 +1,50 @@
+/* 
+  Localization.strings
+  FoodDelivery
+
+  Created by Денис Раевнёв on 08.02.2022.
+  
+*/
+
+"order.button.back" = "Back";
+
+"onfirst.title" = "Find your  Comfort\nFood here";
+"onfirst.subtitle" = "Here You Can find a chef or dish for every\ntaste and color. Enjoy!";
+"onfirst.button.next" = "Next";
+
+"onsecond.title" = "Food Ninja is Where Your\nComfort Food Lives";
+"onsecond.subtitle" = "Enjoy a fast and smooth food delivery at\nyour doorstep";
+"onsecond.button.next" = "Next";
+
+"signUpSuc.title" = "Congrats!";
+"signUpSuc.descripTitle" = "Your Profile Is Ready To Use";
+"signUpSuc.button.next" = "Try Order";
+
+"signIn.button.facebook" = "Facebook";
+"signIn.button.google" = "Google";
+"signIn.title" = "Login To Your Account";
+"signIn.email" = "Email";
+"signIn.password" = "Password";
+"signIn.continue" = "Or Continue With";
+"signIn.button.forgot" = "Forgot Your Password?";
+"signIn.button.login" = "Login";
+"signIn.button.signUp" = "Sign Up";
+
+"signUp.keepMe" = "Keep Me Signed In";
+"signUp.emailMe" = "Email Me About Special Pricing";
+"signUp.title" = "Sign Up For Free";
+"signUp.email" = "Email";
+"signUp.password" = "Password";
+"signUp.button.create" = "Create Account";
+"signUp.button.already" = "already have an account?";
+
+"menu.title" = "Herbal Pancake";
+"menu.subTitle" = "Warung Herbal";
+"menu.price" = "$7";
+
+"main.button.logOut" = "Log out";
+"main.title" = "Find Your\nFavorite Food";
+"main.subTitle" = "Popular Menu";
+"main.button.map" = "MAP";
+
+"search.text" = "What do you want to order?";
