@@ -18,8 +18,8 @@ class HomeView: UIView {
     let filterButton = FilterButton()
     let stackView = UIStackView()
     let subTitleLabel = UILabel()
-    let menuLabel = MenuItemView()
-    let mapButton = UIButton()
+    
+    lazy var collectinView = UICollectionView(frame: .zero, collectionViewLayout: createCollectionViewLayout())
     
     init() {
         super.init(frame: .zero)
@@ -42,8 +42,7 @@ class HomeView: UIView {
         addSubview(titleLabel)
         addSubview(stackView)
         addSubview(subTitleLabel)
-        addSubview(menuLabel)
-        addSubview(mapButton)
+        addSubview(collectinView)
         
         logoImageView.image = R.image.pattern_home()
         
@@ -65,12 +64,11 @@ class HomeView: UIView {
         subTitleLabel.numberOfLines = 0
         subTitleLabel.textAlignment = .left
         
-        mapButton.setTitle(R.string.localization.mainButtonMap(), for: .normal)
-        mapButton.setTitleColor(.black, for: .normal)
-        mapButton.backgroundColor = R.color.brown()!.withAlphaComponent(0.3)
-
-        mapButton.layer.cornerRadius = 15
+        collectinView.backgroundColor = .white
+        collectinView.register(HomeMenuCell.self, forCellWithReuseIdentifier: HomeMenuCell.reuseId)
         
+        let bottomInset: CGFloat = 20 + 74 + 10 + safeAreaInsets.bottom
+        collectinView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: bottomInset, right: 0)
     }
     
     private func setupConstraints() {
@@ -109,14 +107,23 @@ class HomeView: UIView {
             make.left.equalToSuperview().offset(31)
         }
         
-        menuLabel.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(25)
+        collectinView.snp.makeConstraints { make in
             make.top.equalTo(subTitleLabel.snp.bottom).offset(20)
+            make.left.right.bottom.equalToSuperview()
         }
+    }
+    
+    private func createCollectionViewLayout() -> UICollectionViewCompositionalLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(87))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        mapButton.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(100)
-            make.top.equalTo(menuLabel.snp.bottom).offset(20)
-        }
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitem: item, count: 1)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+        section.interGroupSpacing = 20
+        
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        return UICollectionViewCompositionalLayout(section: section, configuration: config)
     }
 }

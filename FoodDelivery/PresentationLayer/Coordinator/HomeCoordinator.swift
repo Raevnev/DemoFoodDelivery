@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Combine
+import Moya
 
 class HomeCoordinator: BaseCoordinator<Void> {
         
@@ -31,7 +32,10 @@ class HomeCoordinator: BaseCoordinator<Void> {
     }
     
     private func showStartScreen() {
-        let viewModel = HomeViewModel()
+        let provider = MoyaProvider<ShopTarget>(plugins: [])
+        let shopService: ShopService = ShopServiceImpl(provider: provider)
+
+        let viewModel = HomeViewModel(shopService: shopService)
         let viewController = HomeViewController(viewModel: viewModel)
         
 //        viewModel.logoutEvent

@@ -8,21 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		42751009B5FA38F136BA0998 /* Pods_FoodDelivery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203B4C32127193F2C5A8FD82 /* Pods_FoodDelivery.framework */; };
-		B743B18E27B298CC00B6D39D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743B18D27B298CC00B6D39D /* R.generated.swift */; };
-		B743B19127B29A1800B6D39D /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = B743B19327B29A1800B6D39D /* Localization.strings */; };
 		B743B18427AF051400B6D39D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743B18327AF051400B6D39D /* HomeCoordinator.swift */; };
 		B743B18727AF0A1200B6D39D /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743B18627AF0A1200B6D39D /* MainController.swift */; };
 		B743B18927AF0F6B00B6D39D /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743B18827AF0F6B00B6D39D /* MainTabBarView.swift */; };
 		B743B18B27AF0FA400B6D39D /* MainTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743B18A27AF0FA400B6D39D /* MainTabBarItemView.swift */; };
+		B743B18E27B298CC00B6D39D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743B18D27B298CC00B6D39D /* R.generated.swift */; };
+		B743B19127B29A1800B6D39D /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = B743B19327B29A1800B6D39D /* Localization.strings */; };
 		B751019727A82190005D151F /* SearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751019627A82190005D151F /* SearchInput.swift */; };
 		B751019927A8339E005D151F /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751019827A8339E005D151F /* FilterButton.swift */; };
-		B751019B27A95DE9005D151F /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751019A27A95DE9005D151F /* MenuItemView.swift */; };
 		B751019F27A96F87005D151F /* UIView+shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751019E27A96F87005D151F /* UIView+shadow.swift */; };
 		B75101A127A992B5005D151F /* NotificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75101A027A992B5005D151F /* NotificationButton.swift */; };
 		B75101A327A9B5CA005D151F /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75101A227A9B5C9005D151F /* CheckBox.swift */; };
 		B75101B127AAD741005D151F /* OrderMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75101AE27AAD741005D151F /* OrderMapView.swift */; };
 		B75101B227AAD741005D151F /* OrderMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75101AF27AAD741005D151F /* OrderMapViewController.swift */; };
 		B75101B327AAD741005D151F /* OrderMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75101B027AAD741005D151F /* OrderMapViewModel.swift */; };
+		B757ECC527B3EA1800C0FB1F /* ShopService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757ECC427B3EA1800C0FB1F /* ShopService.swift */; };
+		B757ECC727B3EA3600C0FB1F /* ShopTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757ECC627B3EA3600C0FB1F /* ShopTarget.swift */; };
+		B757ECC927B3EEFE00C0FB1F /* ShopResponseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757ECC827B3EEFE00C0FB1F /* ShopResponseItem.swift */; };
+		B757ECCC27B3F95700C0FB1F /* HomeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757ECCB27B3F95700C0FB1F /* HomeMenu.swift */; };
+		B757ECCE27B3FEF000C0FB1F /* HomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757ECCD27B3FEF000C0FB1F /* HomeMenuCell.swift */; };
+		B757ECD027B409F700C0FB1F /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757ECCF27B409F700C0FB1F /* HomeSection.swift */; };
+		B757ECD227B40D2400C0FB1F /* HomeViewController+CellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757ECD127B40D2400C0FB1F /* HomeViewController+CellFactory.swift */; };
 		B7751134279755940021D7BA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7751133279755940021D7BA /* SignUpView.swift */; };
 		B7751136279755BC0021D7BA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7751135279755BC0021D7BA /* SignUpViewController.swift */; };
 		B7751138279755E30021D7BA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7751137279755E30021D7BA /* SignUpViewModel.swift */; };
@@ -71,21 +77,27 @@
 		17396EF651411787811C9B0B /* Pods-FoodDelivery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.debug.xcconfig"; path = "Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.debug.xcconfig"; sourceTree = "<group>"; };
 		203B4C32127193F2C5A8FD82 /* Pods_FoodDelivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodDelivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		803FF1CD3C1A3A9B51349636 /* Pods-FoodDelivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.release.xcconfig"; path = "Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.release.xcconfig"; sourceTree = "<group>"; };
-		B743B18D27B298CC00B6D39D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		B743B19227B29A1800B6D39D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
 		B743B18327AF051400B6D39D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		B743B18627AF0A1200B6D39D /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		B743B18827AF0F6B00B6D39D /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
 		B743B18A27AF0FA400B6D39D /* MainTabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItemView.swift; sourceTree = "<group>"; };
+		B743B18D27B298CC00B6D39D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		B743B19227B29A1800B6D39D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
 		B751019627A82190005D151F /* SearchInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInput.swift; sourceTree = "<group>"; };
 		B751019827A8339E005D151F /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
-		B751019A27A95DE9005D151F /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		B751019E27A96F87005D151F /* UIView+shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+shadow.swift"; sourceTree = "<group>"; };
 		B75101A027A992B5005D151F /* NotificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationButton.swift; sourceTree = "<group>"; };
 		B75101A227A9B5C9005D151F /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		B75101AE27AAD741005D151F /* OrderMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderMapView.swift; sourceTree = "<group>"; };
 		B75101AF27AAD741005D151F /* OrderMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderMapViewController.swift; sourceTree = "<group>"; };
 		B75101B027AAD741005D151F /* OrderMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderMapViewModel.swift; sourceTree = "<group>"; };
+		B757ECC427B3EA1800C0FB1F /* ShopService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopService.swift; sourceTree = "<group>"; };
+		B757ECC627B3EA3600C0FB1F /* ShopTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTarget.swift; sourceTree = "<group>"; };
+		B757ECC827B3EEFE00C0FB1F /* ShopResponseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopResponseItem.swift; sourceTree = "<group>"; };
+		B757ECCB27B3F95700C0FB1F /* HomeMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenu.swift; sourceTree = "<group>"; };
+		B757ECCD27B3FEF000C0FB1F /* HomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCell.swift; sourceTree = "<group>"; };
+		B757ECCF27B409F700C0FB1F /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
+		B757ECD127B40D2400C0FB1F /* HomeViewController+CellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CellFactory.swift"; sourceTree = "<group>"; };
 		B7751133279755940021D7BA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B7751135279755BC0021D7BA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B7751137279755E30021D7BA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -157,7 +169,7 @@
 		B751019C27A95E26005D151F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B751019A27A95DE9005D151F /* MenuItemView.swift */,
+				B757ECCD27B3FEF000C0FB1F /* HomeMenuCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +182,33 @@
 				B75101B027AAD741005D151F /* OrderMapViewModel.swift */,
 			);
 			path = OrderMap;
+			sourceTree = "<group>";
+		};
+		B757ECC227B3E9E900C0FB1F /* ShopService */ = {
+			isa = PBXGroup;
+			children = (
+				B757ECC327B3E9FC00C0FB1F /* Response */,
+				B757ECC427B3EA1800C0FB1F /* ShopService.swift */,
+				B757ECC627B3EA3600C0FB1F /* ShopTarget.swift */,
+			);
+			path = ShopService;
+			sourceTree = "<group>";
+		};
+		B757ECC327B3E9FC00C0FB1F /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B757ECC827B3EEFE00C0FB1F /* ShopResponseItem.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B757ECCA27B3F93600C0FB1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B757ECCB27B3F95700C0FB1F /* HomeMenu.swift */,
+				B757ECCF27B409F700C0FB1F /* HomeSection.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B775112D27974CE30021D7BA /* ApplicationLayer */ = {
@@ -254,6 +293,7 @@
 		B7751148279EE82A0021D7BA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B757ECC227B3E9E900C0FB1F /* ShopService */,
 				B775114B279EEAE60021D7BA /* AuthService */,
 			);
 			path = Services;
@@ -427,9 +467,11 @@
 		B7C3CCFE27A6DF38001EE464 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B757ECCA27B3F93600C0FB1F /* Model */,
 				B751019C27A95E26005D151F /* Views */,
 				B7C3CCFF27A6DF50001EE464 /* HomeView.swift */,
 				B7C3CD0127A6DF70001EE464 /* HomeViewController.swift */,
+				B757ECD127B40D2400C0FB1F /* HomeViewController+CellFactory.swift */,
 				B7C3CD0327A6DF7C001EE464 /* HomeViewModel.swift */,
 			);
 			path = Home;
@@ -625,6 +667,7 @@
 				B7C3CCEC27A69A7E001EE464 /* OnboardingSecondViewController.swift in Sources */,
 				B7751158279EF4190021D7BA /* Response+decode.swift in Sources */,
 				B7C3CCF627A69D80001EE464 /* CoordinatorFactory.swift in Sources */,
+				B757ECC527B3EA1800C0FB1F /* ShopService.swift in Sources */,
 				B7751156279EF3300021D7BA /* SignUpResponse.swift in Sources */,
 				B7C3CCEA27A69A6E001EE464 /* OnboardingSecondView.swift in Sources */,
 				B751019927A8339E005D151F /* FilterButton.swift in Sources */,
@@ -638,12 +681,14 @@
 				B75101A327A9B5CA005D151F /* CheckBox.swift in Sources */,
 				B77511452798335E0021D7BA /* Publisher+ControlEvent.swift in Sources */,
 				B743B18727AF0A1200B6D39D /* MainController.swift in Sources */,
+				B757ECD027B409F700C0FB1F /* HomeSection.swift in Sources */,
 				B7751138279755E30021D7BA /* SignUpViewModel.swift in Sources */,
 				B743B18927AF0F6B00B6D39D /* MainTabBarView.swift in Sources */,
+				B757ECC727B3EA3600C0FB1F /* ShopTarget.swift in Sources */,
 				B775116227A06E470021D7BA /* GreenButton.swift in Sources */,
+				B757ECD227B40D2400C0FB1F /* HomeViewController+CellFactory.swift in Sources */,
 				B7C3CCDF27A68E00001EE464 /* SignUpSuccessViewModel.swift in Sources */,
 				B7C3CCF427A69D4B001EE464 /* ApplicationCoordinator.swift in Sources */,
-				B751019B27A95DE9005D151F /* MenuItemView.swift in Sources */,
 				B7C3CCFB27A6C517001EE464 /* UserDefault+propertyWrapper.swift in Sources */,
 				B775114E279EEB230021D7BA /* AuthTarget.swift in Sources */,
 				B75101A127A992B5005D151F /* NotificationButton.swift in Sources */,
@@ -652,14 +697,17 @@
 				B7751B8B2777A33700D86DA9 /* SignInView.swift in Sources */,
 				B7751141279832090021D7BA /* UIButton+Combine.swift in Sources */,
 				B743B18B27AF0FA400B6D39D /* MainTabBarItemView.swift in Sources */,
+				B757ECCC27B3F95700C0FB1F /* HomeMenu.swift in Sources */,
 				B7C3CCE627A694E1001EE464 /* OnboardingFirstViewController.swift in Sources */,
 				B7C3CD0227A6DF70001EE464 /* HomeViewController.swift in Sources */,
 				B7C3CCF827A69DB1001EE464 /* MainCoordinator.swift in Sources */,
 				B7751B6F2777609200D86DA9 /* AppDelegate.swift in Sources */,
 				B7751147279833900021D7BA /* Publisher+ConrolProperty.swift in Sources */,
 				B7751134279755940021D7BA /* SignUpView.swift in Sources */,
+				B757ECCE27B3FEF000C0FB1F /* HomeMenuCell.swift in Sources */,
 				B7751143279832440021D7BA /* UITextField+Combine.swift in Sources */,
 				B75101B327AAD741005D151F /* OrderMapViewModel.swift in Sources */,
+				B757ECC927B3EEFE00C0FB1F /* ShopResponseItem.swift in Sources */,
 				B775115B279EFBA40021D7BA /* AnyPublisher+.swift in Sources */,
 				B75101B127AAD741005D151F /* OrderMapView.swift in Sources */,
 				B7751153279EEE930021D7BA /* SignUpPayload.swift in Sources */,

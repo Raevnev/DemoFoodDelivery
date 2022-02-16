@@ -10,6 +10,10 @@ import Combine
    
 class HomeViewController: UIViewController {
     
+    typealias DataSource = UICollectionViewDiffableDataSource<HomeSection, HomeMenu>
+    
+    private lazy var dataSource: DataSource = createDataSource()
+    private lazy var cellFactory = CellFactory(viewModel: viewModel)
     let viewModel: HomeViewModel
     let rootView = HomeView()
     
@@ -32,6 +36,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
        
         setupBindings()
+        
+        viewModel.viewDidLoadEvent.send(())
     }
     
     private func setupBindings() {
@@ -39,8 +45,27 @@ class HomeViewController: UIViewController {
             .subscribe(viewModel.logoutEvent)
             .store(in: &cancellableSet)
   
-        rootView.mapButton.tapPublisher
-            .subscribe(viewModel.mapEvent)
-            .store(in: &cancellableSet)
+        viewModel.$menus.sink { [weak self] menus in
+            self?.updateDataSource(menus: menus)
+        }.store(in: &cancellableSet)
+    }
+    
+    private func updateDataSource(menus: [HomeMenu]) {
+        var snapshot = dataSource.snapshot()
+        
+        snapshot.deleteAllItems()
+        snapshot.appendSections([.popularMenu])
+        snapshot.appendItems(menus)
+        
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            self?.dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
+        }
+    }
+    
+    private func createDataSource() -> DataSource {
+        let dataSource = DataSource(collectionView: rootView.collectinView) { [weak self] collectionView, indexPath, item in
+            return self?.cellFactory.make(collectionView: collectionView, indexPath: indexPath, item: item)
+        }
+        return dataSource
     }
 }
