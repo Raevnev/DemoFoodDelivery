@@ -9,6 +9,7 @@ import Combine
 import Foundation
 import UIKit
 import Moya
+import SwiftUI
 
 class ApplicationCoordinator: BaseCoordinator<Void> {
     
@@ -68,7 +69,10 @@ class ApplicationCoordinator: BaseCoordinator<Void> {
     
     private func runOnboardingSecond() {
         let viewModel = OnboardingSecondViewModel()
-        let viewController = OnboardingSecondViewController(viewModel: viewModel)
+//        let viewController = OnboardingSecondViewController(viewModel: viewModel)
+        
+        let view = NewOnboardingSecondView(viewModel: viewModel)
+        let viewController = UIHostingController(rootView: view)
         
         viewModel.nextEvent.sink { [weak self] in
             self?.isOnboardingShowed = true
